@@ -1,0 +1,99 @@
+"Article_No"	"Attribute_Name"	"Attribute_Value_Name"	"Quantity"
+1	"Size"	"small"	20
+1	"Color"	"yellow"	
+1	"Length"	"Long"	
+2	"Size"	"small"	15
+2	"Size"	"large"	25
+2	"Color"	"yellow"	
+2	"Color"	"red"	
+3	"Size"	"small"	30
+3	"Size"	"large"	20
+3	"Color"	"purple"	
+3	"Color"	"yellow"	
+3	"Color"	"red"	
+3	"Length"	"Long"	
+4	"Size"	"large"	25
+4	"Color"	"red"	
+5	"Size"	"small"	20
+5	"Size"	"large"	10
+5	"Color"	"yellow"	
+5	"Color"	"red"	
+5	"Length"	"Long"	
+6	"Size"	"small"	16
+6	"Size"	"medium"	20
+6	"Size"	"large"	15
+6	"Color"	"purple"	
+6	"Color"	"red"	
+6	"Length"	"Long"	
+7	"Size"	"small"	26
+7	"Size"	"medium"	22
+7	"Color"	"yellow"	
+8	"Size"	"small"	15
+8	"Size"	"medium"	16
+8	"Size"	"large"	18
+8	"Color"	"purple"	
+8	"Color"	"yellow"	
+9	"Size"	"large"	14
+9	"Color"	"red"	
+9	"Length"	"Long"	
+10	"Size"	"small"	16
+10	"Size"	"large"	26
+10	"Color"	"purple"	
+10	"Length"	"Long"	
+11	"Size"	"small"	24
+11	"Size"	"medium"	30
+11	"Color"	"purple"	
+11	"Color"	"red"	
+12	"Size"	"small"	10
+12	"Size"	"medium"	15
+12	"Color"	"purple"	
+12	"Color"	"yellow"	
+12	"Color"	"red"	
+13	"Size"	"small"	25
+13	"Size"	"medium"	5
+13	"Color"	"purple"	
+13	"Color"	"red"	
+14	"Size"	"small"	10
+14	"Size"	"medium"	15
+14	"Color"	"yellow"	
+14	"Length"	"Long"	
+15	"Size"	"small"	23
+15	"Size"	"large"	20
+15	"Color"	"purple"	
+15	"Color"	"yellow"	
+15	"Color"	"red"	
+16	"Size"	"small"	14
+16	"Size"	"medium"	12
+16	"Size"	"large"	16
+16	"Color"	"purple"	
+16	"Color"	"yellow"	
+16	"Length"	"Long"	
+18	"Size"	"small"	18
+18	"Size"	"medium"	12
+18	"Size"	"large"	14
+18	"Color"	"purple"	
+18	"Color"	"red"	
+19	"Size"	"small"	15
+19	"Size"	"medium"	17
+19	"Color"	"purple"	
+19	"Color"	"yellow"	
+19	"Length"	"Long"	
+22	"Size"	"small"	20
+22	"Size"	"large"	10
+22	"Color"	"purple"	
+22	"Color"	"yellow"	
+25	"Size"	"small"	12
+25	"Color"	"yellow"	
+26	"Size"	"small"	14
+26	"Size"	"large"	25
+26	"Color"	"yellow"	
+26	"Color"	"red"	
+27	"Size"	"medium"	20
+27	"Size"	"large"	10
+27	"Color"	"yellow"	
+27	"Color"	"red"	
+28	"Size"	"small"	15
+28	"Size"	"medium"	20
+28	"Color"	"purple"	
+28	"Color"	"yellow"	
+28	"Length"	"Long"	

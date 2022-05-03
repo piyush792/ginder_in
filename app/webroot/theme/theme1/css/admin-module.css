@@ -1,0 +1,758 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: SSP-Regular;
+    src: url(fonts/SourceSansPro-Regular.ttf);
+}
+@font-face {
+    font-family: SSP-Light;
+    src: url(fonts/SourceSansPro-Light.ttf);
+}
+
+@font-face {
+    font-family: SSP-Light;
+    src: url(fonts/SourceSansPro-Light.ttf);
+}
+
+body{
+	font-family: 'SSP-Regular', arial;
+	/* background-color: #184b82;	 */
+}
+@media screen and (min-width: 300px){	
+	/*===========================
+	Admin navigation module start
+	=============================*/
+	.admin-side-menu{
+		color: #fff;
+		font-weight: bold;
+		font-size: 16px;
+		text-align: center;
+		border-bottom: 1px solid;
+		padding: 15px 0px;
+		box-sizing: border-box;
+		cursor: pointer;
+		background-color: #184b82;
+	}
+	.admin-side-menu .txt-admin-side-menu{
+		margin: 0px 6px;
+	}
+	.admin-navigation-wrapper{
+		background-color: #184b82;
+		width: 100%;
+		display: none;
+	}
+	.admin-navigation-wrapper ul{
+		margin: 0px;
+		padding: 32px 0px;
+		list-style-type: none;
+	}
+	.admin-navigation-wrapper ul li{
+		margin-bottom: 20px;
+		padding: 0px 30px;
+	}
+	.admin-navigation-wrapper ul li:last-child{
+		margin-bottom: 0px;
+	}
+	.admin-navigation-wrapper ul li.adim-nav-item a, .admin-navigation-wrapper ul li.adim-nav-item a:link,
+	.admin-navigation-wrapper ul li.adim-nav-item a:active, .admin-navigation-wrapper ul li.adim-nav-item a:visited{
+	    color: #fff;
+    	font-size: 13px;
+		text-decoration: none;
+	}
+	.admin-navigation-wrapper ul li.adim-nav-item a:hover{
+	    color: #fff;
+    	font-size: 13px;
+		text-decoration: underline;
+	}
+	.admin-navigation-wrapper ul li.adim-nav-item a.nav-admin-icon{
+		margin-right: 10px;
+	}
+	.admin-navigation-wrapper ul li.adim-nav-item a.nav-admin-icon img{
+		width: 24px;
+		margin-right: 8px;
+	}
+	/*===========================
+	Admin navigation module end
+	=============================*/
+
+	/*===========================
+	Admin adverts item start
+	=============================*/	
+	.admin-adverts-wrapper{
+		width: 100%;
+		padding: 20px;
+		box-sizing: border-box;
+		background-color: #f7f8f9;
+		float: none;	
+		display: table;	
+	}
+	.admin-adverts-item {
+		width: 100%;
+		background-color: #fff;
+		padding: 20px;
+		display: table;
+		box-sizing: border-box;
+		box-shadow: 0px 2px 4px 0px #dfdfdf;
+		margin: 0px 0px 28px;
+	}
+	.admin-adverts-item .advert-image{
+		width: 100%;
+		float: none;
+		position: relative;
+	}
+	.admin-adverts-item .advert-image img{
+		width: 100%;
+	}
+	.admin-adverts-item .promoted-ads-active {
+		background-color: #fff;
+		font: normal 14px 'SSP-Regular', arial;
+		color: #3a3a3a;
+		padding: 3px 6px;
+		position: absolute;
+		bottom: 0px;
+	}
+	.advert-details-wrapper{
+		width: 100%;
+		float: none;
+		display: table;
+		box-sizing: border-box;
+		padding: 20px 0px;
+	}
+	.admin-product-heading {
+		font: bold 16px/32px 'SSP-Regular', arial;
+    	color: #3a3a3a;
+	}	
+	.admin-product-attribute-wrapper ul {
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+	}	
+	.admin-adverts-item .advert-title{
+		font-size: 18px;
+		font-weight: 600;
+		color: #3a3a3a;
+		margin-bottom: 10px;
+		padding: 0px;
+	}
+	.admin-adverts-item .advert-edit-wrapper{
+		text-align: left;
+		padding: 0px;
+		margin: 10px 0px
+	}
+	.admin-adverts-item .advert-edit-wrapper .advert-edit-ctrl{
+		color: #b0b0b0;
+		font-size: 14px;
+		background-color: #f7f8f8;
+		padding: 10px;
+		border-radius: 5px;
+		cursor: pointer;
+		
+	}	
+	.admin-promoted-ad{
+		background-color: #fff;
+		font: normal 14px 'SSP-Regular', arial;
+		color: #3a3a3a;
+		padding: 3px 6px;
+		border: 1px solid #cbcbcb;
+		margin: 0px 30px;
+	}
+	.footer-wrapper {
+    	clear: both;
+	}
+	/*===========================
+	Admin adverts item end
+	=============================*/		
+
+	/*===========================
+	Admin adverts edit start
+	=============================*/		
+	.header-anchor {
+		margin-bottom: 40px;
+		display: inline-block;
+	}
+	.anchor-black {
+		font-size: 14px;
+		color: #121312;
+		font-family: 'SSP-Regular', arial;
+		text-decoration: none;
+	}	
+	.anchor-black span.glyphicon {
+		font-size: 12px;
+		color: #121312;
+		margin-right: 10px;
+		position: relative;
+		top: 1px;
+	}		
+	.admin-adverts-wrapper .item-content h2{
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 24px;
+	}
+	.admin-adverts-wrapper .custom-dropdown {
+		background-position: right center;
+	}	
+	
+	.admin-contact-details{
+		margin-top: 46px;
+	}
+
+	.admin-personal-details{
+		margin-top: 0px;
+	}
+	
+	.admin-page-button-wrapper{
+		text-align: left
+	}
+	.btn-third{
+		font: normal 18px 'SSP-Regular', arial;
+		color: #184b82;
+		background-color: transparent;
+		border-color: #184b82;
+		padding: 12px 26px !important;
+		border-radius: 0px !important;
+		margin: 0px 30px;
+	}
+	#ProductDetailsModal .modal-dialog{
+		margin: 0px;
+	}
+	#ProductDetailsModal .modal-dialog .modal-content{
+		width: 100% !important;
+		left: 0px !important;
+		padding: 15px 15px !important;
+		border: 0px;
+	}	
+	#ProductDetailsModal .modal-dialog .modal-content .modal-header{
+		padding: 20px 20px 0px 0px;
+	}
+	#ProductDetailsModal .modal-dialog .modal-content .modal-title{
+		font-size: 16px;
+		color: #6a6a6a;
+		margin-bottom: 10px;
+		font-weight: bold;
+	}	
+	#ProductDetailsModal .modal-dialog .modal-content .uploaded-image-wrapper .heading {
+		font-size: 13px;
+		font-family: 'SSP-Regular', arial;
+		margin: 20px 0px;
+		color: #313131;
+	}
+	#ProductDetailsModal .modal-dialog .modal-content .uploaded-image-wrapper .btn-mini{
+		font-size: 13px;
+		padding: 10px 0px;
+	}
+	#ProductDetailsModal .modal-dialog .modal-content .modal-body{
+		padding: 0px;
+	}	
+	#ProductDetailsModal .modal-dialog .modal-content .modal-body #photo_upload_div input {
+		font-size: 13px;
+		margin: 10px 0px;
+	}	
+	#ProductDetailsModal .modal-dialog .modal-content .modal-body #photo_upload_div input {
+		font-size: 13px;
+		margin: 10px 0px;
+	}
+	#ProductDetailsModal .modal-dialog .modal-content .modal-body #photo_upload_div .alert{
+		width: 96% !important;
+		margin: 10px 0px !important;
+	}	
+	#ProductDetailsModal .modal-dialog .modal-content .modal-body .add_btn_row a{
+		font-size: 13px;
+	}	
+	#ProductDetailsModal .modal-footer{
+		display: table;
+		width: 100%;
+		box-sizing: border-box;
+		text-align: center;
+	}	
+	#ProductDetailsModal .btn-primary, .btn-light{
+		font-size: 13px;
+		padding: 12px 26px;
+		line-height: 12px;
+		margin: 0px 20px;
+		border-radius: 0px;
+	}	
+	/*===========================
+	Admin adverts edit end
+	=============================*/			
+	
+	/*============================
+	Ad Status Switch Bar Start
+	==============================
+	*/
+	.admin-ad-status-wrapper{
+		clear: both;
+	}	
+	.ad-status-wrapper{
+		text-align: left;
+		margin: 20px 0px;
+	}	
+	.admin-ad-status{
+		font: normal 14px 'SSP-Regular', arial;
+		color: #121312;		
+	}
+	.ad-status-wrapper .btn-toggle {
+	  top: 50%;
+	  transform: translateY(-50%);
+	}
+	.btn-toggle {
+	  margin: 0 4rem;
+	  padding: 0;
+	  position: relative;
+	  border: none;
+	  height: 1.5rem;
+	  width: 3rem;
+	  border-radius: 1.5rem;
+	  color: #6b7381;
+	  background: #bdc1c8;
+	}
+	.btn-toggle:focus,
+	.btn-toggle.focus,
+	.btn-toggle:focus.active,
+	.btn-toggle.focus.active {
+	  outline: none;
+	}
+	.btn-toggle:before,
+	.btn-toggle:after {
+	  line-height: 1.5rem;
+	  width: 4rem;
+	  text-align: center;
+	  font-weight: 600;
+	  font-size: 0.75rem;
+	  text-transform: uppercase;
+	  letter-spacing: 2px;
+	  position: absolute;
+	  bottom: 0;
+	  transition: opacity 0.25s;
+	}
+	.btn-toggle:before {
+	  content: 'Off';
+	  left: -4rem;
+	}
+	.btn-toggle:after {
+	  content: 'On';
+	  right: -4rem;
+	  opacity: 0.5;
+	}
+	.btn-toggle > .handle {
+	  position: absolute;
+	  top: 0.1875rem;
+	  left: 0.1875rem;
+	  width: 1.125rem;
+	  height: 1.125rem;
+	  border-radius: 1.125rem;
+	  background: #fff;
+	  transition: left 0.25s;
+	}
+	.btn-toggle.active {
+	  transition: background-color 0.25s;
+	}
+	.btn-toggle.active > .handle {
+	  left: 1.6875rem;
+	  transition: left 0.25s;
+	}
+	.btn-toggle.active:before {
+	  opacity: 0.5;
+	}
+	.btn-toggle.active:after {
+	  opacity: 1;
+	}
+	.btn-toggle.btn-sm:before,
+	.btn-toggle.btn-sm:after {
+	  line-height: -0.5rem;
+	  color: #fff;
+	  letter-spacing: 0.75px;
+	  left: 0.4125rem;
+	  width: 2.325rem;
+	}
+	.btn-toggle.btn-sm:before {
+	  text-align: right;
+	}
+	.btn-toggle.btn-sm:after {
+	  text-align: left;
+	  opacity: 0;
+	  left: 0.4125rem;  
+	}
+	.btn-toggle.btn-sm.active:before {
+	  opacity: 0;
+	}
+	.btn-toggle.btn-sm.active:after {
+	  opacity: 1;
+	}
+	.btn-toggle:before,
+	.btn-toggle:after {
+	  color: #6b7381;
+	}
+	.btn-toggle.active {
+	  background-color: #29b5a8;
+	}
+	.btn-toggle.btn-sm {
+	  margin: 0 0.5rem;
+	  padding: 0;
+	  position: relative;
+	  border: none;
+	  height: 1.5rem;
+	  width: 4rem;
+	  border-radius: 1.5rem;
+	}
+	.btn-toggle.btn-sm:focus,
+	.btn-toggle.btn-sm.focus,
+	.btn-toggle.btn-sm:focus.active,
+	.btn-toggle.btn-sm.focus.active {
+	  outline: none;
+	}
+	.btn-toggle.btn-sm:before{
+	  line-height: 1.5rem;
+	  width: 0.5rem;
+	  text-align: center;
+	  font-weight: 600;
+	  font-size: 0.55rem;
+	  text-transform: uppercase;
+	  letter-spacing: 2px;
+	  position: absolute;
+	  bottom: 0;
+	  transition: opacity 0.25s;
+	}
+	.btn-toggle.btn-sm:after {
+	  line-height: 1.5rem;
+	  width: 0.5rem;
+	  text-align: center;
+	  font-weight: 600;
+	  font-size: 0.55rem;
+	  text-transform: uppercase;
+	  letter-spacing: 2px;
+	  position: absolute;
+	  bottom: 0;
+	  transition: opacity 0.25s;
+	}
+	.btn-toggle.btn-sm:before {
+	  content: 'Disable';
+	  left: 0.4125rem;
+	}
+	.btn-toggle.btn-sm:after {
+	  content: 'Active';
+	  right: -0.5rem;
+	  opacity: 0.5;
+	}
+	.btn-toggle.btn-sm > .handle {
+	  position: absolute;
+	  top: 0.1875rem;
+	  left: 0.1875rem;
+	  width: 1.125rem;
+	  height: 1.125rem;
+	  border-radius: 1.125rem;
+	  background: #fff;
+	  transition: left 0.25s;
+	}
+	.btn-toggle.btn-sm.active {
+	  transition: background-color 0.25s;
+	}
+	.btn-toggle.btn-sm.active > .handle {
+	  left: 2.6875rem;
+	  transition: left 0.25s;
+	}
+	.btn-toggle.btn-sm.active:before {
+	  opacity: 0.5;
+	}
+	.btn-toggle.btn-sm.active:after {
+	  opacity: 1;
+	}
+	.btn-toggle.btn-sm.btn-sm:before{
+	  line-height: -0.5rem;
+	  color: #fff;
+	  letter-spacing: 0.75px;
+	  left: 1.4125rem;
+	  width: 2.325rem;
+	}
+	.btn-toggle.btn-sm.btn-sm:after {
+	  line-height: -0.5rem;
+	  color: #fff;
+	  letter-spacing: 0.75px;
+	  left: 0.4125rem;
+	  width: 2.325rem;
+	}
+	.btn-toggle.btn-sm.btn-sm:before {
+	  text-align: right;
+	}
+	.btn-toggle.btn-sm.btn-sm:after {
+	  text-align: left;
+	  opacity: 0;
+	}
+	.btn-toggle.btn-sm.btn-sm.active:before {
+	  opacity: 0;
+	}
+	.btn-toggle.btn-sm.btn-sm.active:after {
+	  opacity: 1;
+	}
+	.btn-toggle.btn-sm.btn-xs:before,
+	.btn-toggle.btn-sm.btn-xs:after {
+	  display: none;
+	}
+	/*============================
+	Ad Status Switch Bar Start
+	==============================
+	*/
+
+	/*==========================
+	Form controls start
+	============================*/
+	.inline-frm-label {
+		font: normal 16px 'SSP-Regular', arial;
+		color: #313131;
+		width: 100%;
+		display: inline-block;
+		float: none;
+		margin-top: 10px
+	}
+	.inline-lbl-ro-value{
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+	}	
+	.inline-lbl-value{
+		float: none;
+		width: 100%;
+	}	
+	.inline-lbl-value .captcha-img{
+		width: 100%;
+	}
+	/*==========================
+	Form controls end
+	============================*/	
+	
+	/*========================
+	Footer start
+	==========================*/
+	.footer-wrapper {
+		border-top: 1px solid #cbcbcb;
+		background-color: #f7f8f9;
+	}
+	/*========================
+	Footer end
+	==========================*/
+	
+}
+
+@media screen and (min-width: 768px){
+	/*===========================
+	Admin adverts item start
+	=============================*/	
+	.admin-ad-status-wrapper{
+		clear: none;
+		float: right;
+	}	
+	.ad-status-wrapper {
+		text-align: left;
+		margin: 0px 0px;
+	}	
+	.admin-adverts-wrapper{
+		padding: 40px 48px;
+		display: flex;
+    	flex-direction: row;
+    	flex-wrap: wrap;
+	}
+	.admin-adverts-item{
+		width: 48%;
+		margin: 0px 22px 28px 0px;
+	    display: block;		
+	}	
+	.admin-adverts-item:nth-of-type(2n){
+		margin-right: 0px;
+	}
+	.product-image .carousel-item img{
+		width: 480px !important;
+		height: 300px;
+		margin: 0px auto;
+	}	
+	.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, 
+	.carousel-control-prev:hover, .carousel-control-next, .carousel-control-prev{
+		background-color: rgba(0,0,0,.6);
+		width: 48px;
+		height: 48px;
+		top: 33%;
+	}	
+	#UserProfileForm, #UserChangePasswordForm{
+		width: 100%;
+	}
+	/*===========================
+	Admin adverts item end
+	=============================*/	
+	/*==========================
+	Form controls start
+	============================*/
+	.inline-frm-label {
+		width: 30%;
+		float: left;
+	}
+	.inline-lbl-ro-value{
+		width: 50%;		
+		float: left;
+	}	
+	.inline-lbl-value{
+		width: 50%;
+		float: left;		
+	}	
+	/*==========================
+	Form controls end
+	============================*/	
+	
+}
+
+@media screen and (min-width: 1024px){
+	/*===========================
+	Admin adverts item start
+	=============================*/	
+	.admin-adverts-item {
+		width: 100%;
+	}	
+	.admin-adverts-item .advert-image{
+		width: 23%;
+		float: left;
+	}
+	.advert-details-wrapper{
+		width: 75%;
+		float: left;
+		padding: 0px 20px;
+	}	
+	.admin-product-attribute-content li.attribute-item{
+		width: 50% !important;
+		float: left !important;
+	}
+	#ProductDetailsModal .modal-dialog {
+		margin: 0px auto;
+		max-width: 720px;
+	}	
+	#ProductDetailsModal .modal-dialog .modal-content {
+		overflow: scroll;
+		height: 560px;
+	}	
+	/*===========================
+	Admin adverts item end
+	=============================*/		
+	/*===========================
+	Admin navigation module start
+	=============================*/
+	.admin-side-menu{
+		display: none;
+	}
+	.admin-navigation-wrapper{
+		background-color: #184b82;
+		width: 18%;
+		float: left;
+		display: block;
+	}
+	/*===========================
+	Admin navigation module end
+	=============================*/
+	/*===========================
+	Admin adverts item start
+	=============================*/	
+	.admin-middle-content{
+		display: flex;
+	}
+	.admin-adverts-wrapper{
+		width: 82%;
+		float: left;
+	}
+	.admin-adverts-item {
+		margin: 0px 0px 28px;
+	}	
+	/*===========================
+	Admin adverts item end
+	=============================*/	
+}
+
+@media screen and (min-width: 1280px){
+	/*===========================
+	Admin navigation module start
+
+	=============================*/
+	.admin-navigation-wrapper ul li{
+		margin-bottom: 64px;
+		padding: 0px;
+		padding-left: 46px;
+	}	
+	/*===========================
+	Admin navigation module end
+	=============================*/
+		
+	/*===========================
+	Admin adverts item start
+	=============================*/	
+	.admin-adverts-wrapper{
+		width: 82%;
+		padding: 20px 70px 40px;
+		float: left;
+	}
+	.admin-adverts-item {
+		width: 954px;
+		margin: 28px 0px;
+	}	
+	.admin-adverts-item .advert-edit-wrapper{
+		text-align: right;
+		padding: 0px;
+		margin: 0px
+	}
+	.ad-status-wrapper{
+		text-align: right;
+		margin: 0px;
+	}	
+	.admin-navigation-wrapper ul li.adim-nav-item a, .admin-navigation-wrapper ul li.adim-nav-item a:link,
+	.admin-navigation-wrapper ul li.adim-nav-item a:active, .admin-navigation-wrapper ul li.adim-nav-item a:visited{
+	    color: #fff;
+    	font-size: 16px;
+		text-decoration: none;
+	}
+	.admin-navigation-wrapper ul li.adim-nav-item a:hover{
+	    color: #fff;
+    	font-size: 16px;
+		text-decoration: none;
+	}		
+	.admin-navigation-wrapper ul li.adim-nav-item a.nav-admin-icon img {
+		width: 32px;
+	}
+	#ProductDetailsModal .modal-dialog {
+		margin: 0px auto;
+		max-width: 840px;
+	}	
+	#ProductDetailsModal .modal-dialog .modal-content {
+		overflow: auto;
+		height: 560px;
+		overflow-x: hidden;
+		padding: 0px 40px !important;
+		top: 30px;
+	}
+	.uploaded-image-item img {
+		width: 90px;
+		height: 90px;
+	}		
+	#ProductDetailsModal .modal-dialog .modal-content .modal-title {
+		font-size: 22px;
+	}	
+	#ProductDetailsModal .modal-dialog .modal-content .uploaded-image-wrapper .heading {
+		font-size: 16px;
+	}
+	#ProductDetailsModal .modal-dialog .modal-content .uploaded-image-wrapper .btn-mini, #ProductDetailsModal .modal-dialog .modal-content .modal-body #photo_upload_div input, #ProductDetailsModal .modal-dialog .modal-content .modal-body .add_btn_row a {
+		font-size: 16px;
+	}
+	#ProductDetailsModal .btn-primary, .btn-light {
+		font-size: 16px;
+		padding: 12px 26px;
+		line-height: 21px;
+	}	
+	/*===========================
+	Admin adverts item end
+	=============================*/	
+	/*==========================
+	Form controls start
+	============================*/
+	.inline-frm-label {
+		width: 20%;
+	}
+	.inline-lbl-value .captcha-img {
+		width: auto;
+	}	
+	/*==========================
+	Form controls end
+	============================*/	
+	
+}

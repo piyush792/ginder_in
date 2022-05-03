@@ -1,0 +1,681 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ginder.in</title>
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/bootstrap-grid.min.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/ginder-in-style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/admin-module.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/fonts-glyphicon.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/jquery-ui.css" type="text/css" rel="stylesheet" media="all">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+<script>
+$(document).ready(function(){
+    $(".btn-favourite").click(function(){
+        $(this).children('span').addClass('glyphicon-star selected-favourite').removeClass('glyphicon-star-empty');
+    });
+	
+	$('[data-toggle="tooltip"]').tooltip(); 
+	
+	/* Global Navigation on close click for resposnive design start*/
+	$('.navbar-toggler').click(function(){
+			$('body').addClass("fixedPosition");
+	});
+
+	$("#ctrl-navbar-close, .mobile-global-navbar-overlay").click(function(){
+        $("#collapsibleNavbar").removeClass('show');
+		$('body').removeClass("fixedPosition");		
+    });
+	/* Global Navigation on close click for resposnive design end*/	
+	
+	/* Mobile search control */
+	$('#mobile-search-ctrl').hide();
+	
+	$('#SearchModal-MobTab').click(function(){
+		$('#mobile-search-ctrl').show();
+		
+	});
+	$("#mobile-search-close").click(function(){
+		$('#mobile-search-ctrl').hide();
+	});
+	/* Mobile search control end */
+	
+	/* Mobile filter control start */
+	$('#ctrl-mobile-filter').click(function(){
+		$('#ctrl-filter-sidebar').show();
+	});
+	$('#ctrl-filter-close').click(function(){
+		$('#ctrl-filter-sidebar').hide();
+	});
+	/* Mobile filter control start */	
+	$('#admin-sidemenu-ctrl').click(function(){
+				if($(".admin-navigation-wrapper").is(":visible")){
+                    $('.admin-navigation-wrapper').hide();
+                } else{
+                    $('.admin-navigation-wrapper').show();
+                }			 
+		//$('.admin-navigation-wrapper').show();	
+	});
+	
+});
+</script>
+</head>
+<body>
+<!-- Mobile search modal start -->
+<div id="mobile-search-ctrl" class="mobile-search-control"> <span id="mobile-search-close" class="glyphicon glyphicon-remove-circle"></span>
+  <input type="search" placeholder="I am looking for..." class="field-search">
+  <button class="btn-search"><img src="images/icon-search.png"></button>
+</div>
+<!-- Mobile search modal end --> 
+<!--  login modal start -->
+<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="registration-features-col">
+          <header class="heading">Benefits</header>
+          <ul>
+            <li>Publish multiple ads in <span class="highlight-text">Free</span></li>
+            <li>Provide <span class="highlight-text">personalise dashboard</span> to manage posted ads after registration</li>
+            <li>Provide ability to Share ads with friends on <span class="highlight-text">social networking</span> </li>
+          </ul>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+        <div class="login-signup-wrapper">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item"> <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Login</a> </li>
+            <li class="nav-item"> <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Register</a> </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <form class="form-signup">
+                <div class="form-label-group">
+                  <input type="text" class="form-control" id="label-email" placeholder="Enter your registered email id">
+                  <label for="label-email">Email</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="password" class="form-control" id="label-password" placeholder="Enter your password">
+                  <label for="label-password">Password</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="button" class="button button-primary" value="Login">
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <form class="form-signup">
+                <div class="form-label-group">
+                  <input type="text" class="form-control" id="label-reg-email" placeholder="Enter your email id">
+                  <label for="label-reg-email">Email</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="password" class="form-control" id="label-reg-password" placeholder="Enter your password">
+                  <label for="label-reg-password">Password</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="password" class="form-control" id="label-regconf-password" placeholder="Enter your password">
+                  <label for="label-regconf-password">Confirm Password</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="button" class="button button-primary" value="Register">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="single-signup-wrapper">
+          <div class="single-signup-content">
+            <div class="regular-text">Sign in With</div>
+            <button class="icon-gmail-signup"><img src="images/icon-gmail-login.png"> Gmail Account</button>
+            <button class="icon-facebook-signup"><img src="images/icon-facebook-login.png"> Facebook Account</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- login modal end -->
+<header class="page-header container-fluid">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <span class="glyphicon glyphicon-menu-hamburger"></span> </button>
+  <a href="index.html" class="brand-logo"><img src="images/brand-logo.png"></a>
+  <div class="mobile-ctrl-header">
+    <div class="search-wrapper">
+      <div class="mobtab-search-bar">
+        <div class="btn-search" id="SearchModal-MobTab"><span class="glyphicon glyphicon-search"></span></div>
+      </div>
+      <div class="desktop-search-bar">
+        <input type="text" placeholder="Search for electronics, appliance, furniture, vehicles..." class="input-search">
+        <select class="input-location">
+          <option selected>location</option>
+          <option value="Andaman &amp; Nicobar Islands"> Andaman &amp; Nicobar Islands</option>
+          <option value="Andhra Pradesh"> Andhra Pradesh</option>
+          <option value="Arunachal Pradesh"> Arunachal Pradesh</option>
+          <option value="Assam"> Assam</option>
+          <option value="Bihar"> Bihar</option>
+          <option value="Chandigarh"> Chandigarh</option>
+          <option value="Chattisgarh"> Chattisgarh</option>
+          <option value="Dadra &amp; Nagar Haveli"> Dadra &amp; Nagar Haveli</option>
+          <option value="Daman &amp; Diu"> Daman &amp; Diu</option>
+          <option value="Delhi"> Delhi</option>
+          <option value="Goa"> Goa</option>
+          <option value="Gujarat"> Gujarat</option>
+          <option value="Haryana"> Haryana</option>
+          <option value="Himachal Pradesh"> Himachal Pradesh</option>
+          <option value="Jammu &amp; Kashmir"> Jammu &amp; Kashmir</option>
+          <option value="Jharkhand"> Jharkhand</option>
+          <option value="Karnataka"> Karnataka</option>
+          <option value="Kerala"> Kerala</option>
+          <option value="Lakshadweep"> Lakshadweep</option>
+          <option value="Madhya Pradesh"> Madhya Pradesh</option>
+          <option value="Maharashtra"> Maharashtra</option>
+          <option value="Manipur"> Manipur</option>
+          <option value="Meghalaya"> Meghalaya</option>
+          <option value="Mizoram"> Mizoram</option>
+          <option value="Nagaland"> Nagaland</option>
+          <option value="Orissa"> Orissa</option>
+          <option value="Pondicherry"> Pondicherry</option>
+          <option value="Punjab"> Punjab</option>
+          <option value="Rajasthan"> Rajasthan</option>
+          <option value="Sikkim"> Sikkim</option>
+          <option value="Tamil Nadu"> Tamil Nadu</option>
+          <option value="Telangana"> Telangana</option>
+          <option value="Tripura"> Tripura</option>
+          <option value="Uttarakhand"> Uttarakhand</option>
+          <option value="Uttar Pradesh"> Uttar Pradesh</option>
+          <option value="West Bengal"> West Bengal</option>
+          <option value="Ahmedabad">Ahmedabad</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Coimbatore">Coimbatore</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Kochi">Kochi</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Pune">Pune</option>
+          <option value="Gurgaon">Gurgaon</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Lucknow">Lucknow</option>
+          <option value="Noida">Noida</option>
+          <option value="NaviMumbai">NaviMumbai</option>
+          <option value="Trivandrum">Trivandrum</option>
+        </select>
+        <button class="btn-search">Search</button>
+      </div>
+    </div>
+    <div class="login-wrapper">
+      <div class="mobile-login"> <img  data-toggle="modal" data-target="#LoginModal" src="images/mob-userlogin.png"> </div>
+      <div class="desktop-login"> <img data-toggle="modal" data-target="#LoginModal" src="images/btn-login.png"> </div>
+    </div>
+    <div class="post-ad-wrapper">
+      <button class="btn-post-ad" onClick="window.location.href='post-an-ad.html'">Post an Ad</button>
+    </div>
+  </div>
+</header>
+<!-- global navigation start -->
+<div class="global-navbar collapse" id="collapsibleNavbar">
+  <div class="mobile-global-navbar-overlay"></div>
+  <div id="ctrl-navbar-close" class="navbar-close"><span class="glyphicon glyphicon-remove"></span></div>
+  <div class="navbar-items-wrapper"> <a href="index.html">Home</a>
+    <div class="global-navbar-dropdown">
+      <div class="dropbtn">Electronics  &amp; Appliance <i class="fa fa-caret-down"></i> </div>
+      <div class="global-navbar-dropdown-content">
+        <div class="header">
+          <h2>Electronics & Appliance</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Air-Conditioners</a></li>
+              <li><a href="#">Blu-Ray</a></li>
+              <li><a href="#">Cameras</a></li>
+              <li><a href="#">Computers</a></li>
+              <li><a href="#">Laptops</a></li>
+              <li><a href="#">Lights</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Parts</a></li>
+              <li><a href="#">Phones</a></li>
+              <li><a href="#">Printers</a></li>
+              <li><a href="#">Tablets</a></li>
+              <li><a href="#">Tools</a></li>
+              <li><a href="#">DVD</a></li>
+              <li><a href="#">Dishwashers</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Dryers</a></li>
+              <li><a href="#">Fridges</a></li>
+              <li><a href="#">Gas Tops</a></li>
+              <li><a href="#">Iron</a></li>
+              <li><a href="#">Ovens</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global-navbar-dropdown">
+      <div class="dropbtn">Home, Furniture &amp; Pets<i class="fa fa-caret-down"></i> </div>
+      <div class="global-navbar-dropdown-content">
+        <div class="header">
+          <h2>Jobs</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li><a href="#">Beds</a></li>
+              <li><a href="#">Chairs</a></li>
+              <li><a href="#">Cupboards</a></li>
+              <li><a href="#">Dining</a></li>
+              <li><a href="#">Drawers and Closets</a></li>
+              <li><a href="#">Outdoor Furnitures</a></li>
+              <li><a href="#">Parts</a></li>
+              <li><a href="#">Sofas</a></li>
+              <li><a href="#">Tables</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Tools</a></li>
+              <li><a href="#">Birds</a></li>
+              <li><a href="#">Cats</a></li>
+              <li><a href="#">Cows</a></li>
+              <li><a href="#">Dogs</a></li>
+              <li><a href="#">Fishes</a></li>
+              <li><a href="#">Horses</a></li>
+              <li><a href="#">Lost Pets</a></li>
+              <li><a href="#">Pet Care</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Pet Food</a></li>
+              <li><a href="#">Pet Products</a></li>
+              <li><a href="#">Pet Sitting</a></li>
+              <li><a href="#">Pet Trainer</a></li>
+              <li><a href="#">Rabbits</a></li>
+              <li><a href="#">Household Items</a></li>
+              <li><a href="#">Others</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global-navbar-dropdown">
+      <div class="dropbtn">Jobs<i class="fa fa-caret-down"></i> </div>
+      <div class="global-navbar-dropdown-content">
+        <div class="header">
+          <h2>Jobs</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li><a href="#">Accountancy</a></li>
+              <li><a href="#">Administrative Work</a></li>
+              <li><a href="#">Agriculuture</a></li>
+              <li><a href="#">Astrology</a></li>
+              <li><a href="#">Computers</a></li>
+              <li><a href="#">Automotives</a></li>
+              <li><a href="#">Banking</a></li>
+              <li><a href="#">Beauticians</a></li>
+              <li><a href="#">Botany</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Call Centers</a></li>
+              <li><a href="#">Carpenter</a></li>
+              <li><a href="#">Cashiers</a></li>
+              <li><a href="#">Cleaner</a></li>
+              <li><a href="#">Community Work</a></li>
+              <li><a href="#">Construction and Development</a></li>
+              <li><a href="#">Consultation Services</a></li>
+              <li><a href="#">Content Writer</a></li>
+              <li><a href="#">Data Entry</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Delivery and collection</a></li>
+              <li><a href="#">Design and Architecture</a></li>
+              <li><a href="#">Driver</a></li>
+              <li><a href="#">Education and Training</a></li>
+              <li><a href="#">Entertainment</a></li>
+              <li><a href="#">Faculty Jobs</a></li>
+              <li><a href="#">Government Jobs</a></li>
+              <li><a href="#">Health Services</a></li>
+              <li><a href="#">Hospitality</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">HR</a></li>
+              <li><a href="#">Information Technology</a></li>
+              <li><a href="#">Labour</a></li>
+              <li><a href="#">Manufacturing and Transport</a></li>
+              <li><a href="#">Entertainment</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Mining</a></li>
+              <li><a href="#">Nursing</a></li>
+              <li><a href="#">Office Assistance</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Part-Time Jobs</a></li>
+              <li><a href="#">Placements Consultants</a></li>
+              <li><a href="#">Property Management</a></li>
+              <li><a href="#">Receptionist</a></li>
+              <li><a href="#">Research</a></li>
+              <li><a href="#">Sales</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Tourism</a></li>
+              <li><a href="#">Traders</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global-navbar-dropdown">
+      <div class="dropbtn">Vehciles<i class="fa fa-caret-down"></i> </div>
+      <div class="global-navbar-dropdown-content">
+        <div class="header">
+          <h2>Vehciles</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li><a href="#">Cars</a></li>
+              <li><a href="#">Commercial Vehicles</a></li>
+              <li><a href="#">Motorcycles</a></li>
+              <li><a href="#">Scooters</a></li>
+              <li><a href="#">Bicycles</a></li>
+              <li><a href="#">Spare Parts</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global-navbar-dropdown">
+      <div class="dropbtn">Service For Sale<i class="fa fa-caret-down"></i> </div>
+      <div class="global-navbar-dropdown-content">
+        <div class="header">
+          <h2>Service For Sale</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li><a href="#">Accounting and Finance</a></li>
+              <li><a href="#">Advertising</a></li>
+              <li><a href="#">Astrologer</a></li>
+              <li><a href="#">Automotive</a></li>
+              <li><a href="#">Builders</a></li>
+              <li><a href="#">Catering</a></li>
+              <li><a href="#">Child Care</a></li>
+              <li><a href="#">Cleaning</a></li>
+              <li><a href="#">Computers</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Constructions</a></li>
+              <li><a href="#">Driving Classes</a></li>
+              <li><a href="#">Education</a></li>
+              <li><a href="#">Electronics</a></li>
+              <li><a href="#">Event Planner</a></li>
+              <li><a href="#">Furniture</a></li>
+              <li><a href="#">Gardening</a></li>
+              <li><a href="#">Health and Beauty</a></li>
+              <li><a href="#">Interior Design and Decoration</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Legal</a></li>
+              <li><a href="#">Loan and Insurace</a></li>
+              <li><a href="#">Locksmiths</a></li>
+              <li><a href="#">Maid and Housekeeping</a></li>
+              <li><a href="#">Packers and Movers</a></li>
+              <li><a href="#">Painting</a></li>
+              <li><a href="#">Parlour and Salon</a></li>
+              <li><a href="#">Pest Control</a></li>
+              <li><a href="#">Plumbing</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Rental Vehicles</a></li>
+              <li><a href="#">Repairs</a></li>
+              <li><a href="#">Restaurants and Bars</a></li>
+              <li><a href="#">Retail</a></li>
+              <li><a href="#">Taxis and Drivers</a></li>
+              <li><a href="#">Tourism</a></li>
+              <li><a href="#">Translation</a></li>
+              <li><a href="#">Transportation</a></li>
+              <li><a href="#">Tree Cutting</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><a href="#">Web Service</a></li>
+              <li><a href="#">AutoMobiles</a></li>
+              <li><a href="#">Franchisee</a></li>
+              <li><a href="#">Hospitality</a></li>
+              <li><a href="#">Retail</a></li>
+              <li><a href="#">Others</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global-navbar-dropdown">
+      <div class="dropbtn">Reals Estate<i class="fa fa-caret-down"></i> </div>
+      <div class="global-navbar-dropdown-content">
+        <div class="header">
+          <h2>Real Estate</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li><a href="#">Commercials</a></li>
+              <li><a href="#">Flat Share and House Share</a></li>
+              <li><a href="#">Houses and Apartments</a></li>
+              <li><a href="#">Land</a></li>
+              <li><a href="#">PGs and Hostels </a></li>
+              <li><a href="#">Realestate Agents</a></li>
+              <li><a href="#">Rental Properties</a></li>
+              <li><a href="#">Business for sale</a></li>
+              <li><a href="#">Others</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global-navbar-dropdown">
+      <div class="dropbtn">Matrimonial<i class="fa fa-caret-down"></i> </div>
+      <div class="global-navbar-dropdown-content">
+        <div class="header">
+          <h2>Matrimonial</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li><a href="#">Bride</a></li>
+              <li><a href="#">Groom</a></li>
+              <li><a href="#">Marraige Halls</a></li>
+              <li><a href="#">Matrimonial Services</a></li>
+              <li><a href="#">Others</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global-navbar-dropdown">
+      <div class="dropbtn">Education &amp; Books<i class="fa fa-caret-down"></i> </div>
+      <div class="global-navbar-dropdown-content">
+        <div class="header">
+          <h2>Education &amp; Books</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li><a href="#">Assignments</a></li>
+              <li><a href="#">Career Counselling</a></li>
+              <li><a href="#">Coaching Center</a></li>
+              <li><a href="#">Distance Learning</a></li>
+              <li><a href="#">Music and Dance Classes</a></li>
+              <li><a href="#">Overseas Learning</a></li>
+              <li><a href="#">Books</a></li>
+              <li><a href="#">Others</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="global-navbar-dropdown">
+      <div class="dropbtn">Sports, Fitness &amp; Hobbies<i class="fa fa-caret-down"></i> </div>
+      <div class="global-navbar-dropdown-content">
+        <div class="header">
+          <h2>Sports, Fitness &amp; Hobbies</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <ul>
+              <li><a href="#">Gym and Fitness</a></li>
+              <li><a href="#">Musical Instruments</a></li>
+              <li><a href="#">Other Hobbies</a></li>
+              <li><a href="#">Sport Equipment</a></li>
+              <li><a href="#">Others</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- global navigation end -->
+<div class="clearfix"></div>
+<div class="admin-middle-content"> 
+    <div class='admin-side-menu' id="admin-sidemenu-ctrl">
+        <span class="glyphicon glyphicon-menu-hamburger"></span> <span class="txt-admin-side-menu">Side Menu</span>
+    </div>
+  <!-- Left sidebar section start -->
+  <div class='admin-navigation-wrapper'>
+    <ul>
+      <li class='adim-nav-item'><a href='#'><img src="images/icon-admin-manage-ads.png" class="nav-admin-icon"> <span>Manage Ads</span></a></li>
+      <li class='adim-nav-item'><a href='#'><img src="images/icon-admin-personalinfo.png" class="nav-admin-icon"> <span>Personal Info</span></a></li>
+      <li class='adim-nav-item'><a href='#'><img src="images/icon-admin-settings.png" class="nav-admin-icon"> <span>Settings</span></a></li>
+    </ul>
+  </div>
+  
+  <!-- Left sidebar section end -->   
+  <!-- Right Content start -->
+  <div class="admin-adverts-wrapper">
+ 
+      <div class="item-content admin-personal-details">
+      <header class="header-wrapper">
+        <h2 class="float-left">Settings - Password Reset</h2>
+      </header>
+      <div class="item-content-wrapper">
+        <form>
+                <div class="form-group row">
+                    <div class="frm-mobtab-topbot col-12">
+                      <label class="inline-frm-label">Email Id</label> 
+                       <div class="inline-lbl-ro-value">Batra.Steel@gmail.com</div>
+                 </div>
+               </div>
+               <div class="form-group row">
+                    <div class="frm-mobtab-topbot col-12">
+                      <label class="inline-frm-label">New Password</label> 
+                       <div class="inline-lbl-value"><input type="text" class="form-control"></div>
+                 </div>
+               </div>
+               <div class="form-group row">
+                    <div class="frm-mobtab-topbot col-12">
+                      <label class="inline-frm-label">Retype New Password</label> 
+                       <div class="inline-lbl-value"><input type="text" class="form-control"></div>
+                 </div>
+               </div>
+               <div class="form-group row">
+                    <div class="frm-mobtab-topbot col-12">
+                      <label class="inline-frm-label">Enter the value</label> 
+                       <div class="inline-lbl-value"><img src="images/captcha.jpg" class="captcha-img"></div>
+                 </div>
+               </div>               
+          
+          
+        </form>
+      </div>
+    </div>
+    
+    <div class="page-buttons-wrapper admin-page-button-wrapper">
+      <button class="btn btn-secondary btn-save">Save</button> <button class="btn btn-third btn-save">Cancel</button>
+    </div>
+  
+  </div>
+  <!-- Right Content end --> 
+  
+</div>
+<!-- footer section start -->
+<section class="footer-wrapper">
+  <div class="footer-links-wrapper">
+    <div class='col-sm-12 col-lg-3 footer-links' >
+      <header>
+        <h2 class="section-heading">Information</h2>
+      </header>
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Policy</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Report Spam</a></li>
+      </ul>
+    </div>
+    <div class='col-sm-12 col-lg-3 footer-links' >
+      <header>
+        <h2 class="section-heading">Site Features</h2>
+      </header>
+      <ul>
+        <li><a href="#">Promote your ad!</a></li>
+        <li><a href="#">Premium Account</a></li>
+        <li><a href="#">XML Feed Upload</a></li>
+      </ul>
+    </div>
+    <div class='col-sm-12 col-lg-3 footer-links' >
+      <header>
+        <h2 class="section-heading">Site Features</h2>
+      </header>
+      <ul>
+        <li><a href="#">Promote your ad!</a></li>
+        <li><a href="#">Premium Account</a></li>
+        <li><a href="#">XML Feed Upload</a></li>
+      </ul>
+    </div>
+    <div class='col-sm-12 col-lg-3 footer-links' >
+      <header>
+        <h2 class="section-heading">Follow us</h2>
+      </header>
+      <div> <span><a href="#"><img src="images/icon-facebook.png"></a></span> <span><a href="#"><img src="images/icon-twitter.png"></a></span> <span><a href="#"><img src="images/icon-pinterest.png"></a></span> <span><a href="#"><img src="images/icon-instagram.png"></a></span> </div>
+    </div>
+  </div>
+  <div class="footer-logo"><img src="images/brand-logo.png"</div>
+  <div class="footer-brand-location"> <span><a href="#">Australia</a></span> <span><a href="#">Brazil</a></span> <span><a href="#">Canada</a></span> <span><a href="#">China</a></span> <span><a href="#">France</a></span> <span><a href="#">Germany</a></span> <span><a href="#">Italy</a></span> <span><a href="#">India</a></span> <span><a href="#">Japan</a></span> <span><a href="#">Mexico</a></span> <span><a href="#">Netherlands</a></span> <span><a href="#">Spain</a></span> <span><a href="#">United Kingdom</a></span> <span><a href="#">United States</a></span> </div>
+  <div class="copy-right">All copyrights reserved @ 2016- Ginder - Local Classified Ads</div>
+</section>
+<!-- footer section end -->
+</body>
+</html>
